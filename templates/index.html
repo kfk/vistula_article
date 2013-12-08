@@ -1,0 +1,66 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation</title>
+    <link href="http://fonts.googleapis.com/css?family=Medula+One:300|Lato" rel="stylesheet" type="text/css" /> 
+    <link rel="stylesheet" href="static/stylesheets/foundation.min.css" />  
+    <link rel="stylesheet" href="static/stylesheets/style.css" />
+</head>
+  <body>
+    <a name="home"></a>  
+    <ul class="left-fixed-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#intro">First day</a></li>
+        <li><a href="#plan">The Plan</a></li>
+    </ul>
+
+    <div class="fullscreen-cont">
+        <img class="fullscreen-img" src="static/images/IMG_0626.JPG"></img>     
+    </div>
+
+    <div class="go-intro"><h2><a href="#intro">Start</a></h2></div> 
+
+    <div class="img-caption">
+        <h2>Kayaking on the Vistula in Poland</h2>
+        <p>Kayaking across the largest river in Poland. From Krakow up to Gdansk</p>
+    </div>    
+
+    <div class="row"> 
+        <div class="small-2 large-2 columns">
+            <br>
+        </div>
+        <div class="small-5 large-5 columns">
+            {{ article_md|markdown}}
+            <div id="markdown"></div>
+        </div>
+
+        <div class="small-3 large-3 columns">
+            {% for k in asides.keys() %} 
+                <div id={{k}} class="aside">{{asides[k]|safe}}</div>
+            {% endfor %}
+       </div>
+
+       <div class="small-2 large-2 columns">
+        <br>
+       </div>
+    </div>
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/foundation.min.js"></script> 
+    <script src="static/js/foundation.offcanvas.js"></script>
+    <script>
+              $(document).foundation();
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.aside').each(function(i, obj){
+                var a_id = '#a_' + obj.id
+                var pos = $(a_id).position().top + 'px';
+                $('#' + obj.id).css({'top':pos});
+            });
+
+        });
+    </script>
+  </body>
+</html>

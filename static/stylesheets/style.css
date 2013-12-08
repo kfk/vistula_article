@@ -1,0 +1,70 @@
+/* line 1, ../scss/style.scss */
+html, body {
+  /* any div up to fullscreen-cont must have this in this case html and body */
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+/* line 7, ../scss/style.scss */
+.fullscreen-cont {
+  display: block;
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  margin-bottom: 2px;
+}
+
+/* line 14, ../scss/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Medula One';
+  color: brown;
+}
+
+/* line 18, ../scss/style.scss */
+p {
+  font-family: 'Lato';
+  text-align: justify;
+}
+
+/* line 23, ../scss/style.scss */
+.img-caption {
+  color: brown;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  padding-left: 10%;
+}
+
+/* line 31, ../scss/style.scss */
+.aside {
+  position: absolute;
+}
+
+/* line 35, ../scss/style.scss */
+.aside p {
+  font-size: small;
+}
+
+/* line 39, ../scss/style.scss */
+.go-intro {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+}
+
+/* line 45, ../scss/style.scss */
+.left-fixed-nav {
+  position: fixed !important;
+}
+
+/* line 59, ../scss/style.scss */
+a {
+  color: brown;
+}
+
+/*Foundation Customizations*/
+/* line 65, ../scss/style.scss */
+.row {
+  min-width: 100% !important;
+}
